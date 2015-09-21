@@ -1,0 +1,357 @@
+<!doctype html>
+<html class="no-js" lang='en'>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GTS News app proto</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#005B99">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon"                             href="img/icon-tiny.png" type="image/png" >
+    <link rel="icon"             sizes="192x192" href="img/icon-4x.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/icon-3x.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="img/icon-4x.png">
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js" async></script>
+</head>
+<body ng-app="verbsApp">
+
+
+
+
+<main class="proto__container">
+
+    <!-- SLIDE intro -->
+<div class="proto__slide proto__slide__intro js-protoSlideIntro">
+  <button class="proto__slide__intro__btn js-protoSlideIntroBtn">launch</button>
+</div>
+
+    <!-- SLIDE 1 -->
+<div class="proto__slide proto__slide__1 proto__slide--background js-protoSlide1">
+  
+  <header class="proto__slide__head">
+    <h1 class="proto__slide__head__title">prototype</h1>
+  </header> 
+  
+  <menu class="proto__slide__1__menu">
+    <a href="#protoTop" class="proto__slide__1__menu__item proto__slide__1__menu__item--news js-protoSlideTopBtn">
+      <div class="proto__slide__1__menu__item__img proto__slide__1__menu__item__img--news"></div>
+      <i class="icon proto__slide__1__menu__item__icon proto__slide__1__menu__item__icon__news"></i>
+      <span class="proto__slide__1__menu__item__text">Top news</span>
+    </a>
+    <a href="#protoPicks" class="proto__slide__1__menu__item js-protoSlideEditorBtn">
+      <div class="proto__slide__1__menu__item__img"></div>
+      <i class="icon proto__slide__1__menu__item__icon"></i>
+      <span class="proto__slide__1__menu__item__text">Editor's Pick</span>
+    </a>
+    <a href="#protoPhotos" class="proto__slide__1__menu__item js-protoSlidePhotoBtn">
+      <div class="proto__slide__1__menu__item__img"></div>
+      <i class="icon proto__slide__1__menu__item__icon"></i>
+      <span class="proto__slide__1__menu__item__text">Photo Roll</span>
+    </a>
+  </menu>
+
+  <div class="proto__slide__divider">Latest News</div>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+  
+</div>
+
+    <!-- SLIDE 2: top news -->
+<div class="proto__slide proto__slide__1 proto__slide--in js-protoSlide2Top">
+  
+  <header class="proto__slide__head js-protoSlideBackBtn">
+    <span class="proto__slide__head__back"></span>
+    <h1 class="proto__slide__head__title">top news</h1>
+  </header> 
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+  
+</div>
+
+    <!-- SLIDE 2: top news -->
+<div class="proto__slide proto__slide__1 proto__slide--in js-protoSlide3Editor">
+  
+  <header class="proto__slide__head js-protoSlideBackBtn">
+    <span class="proto__slide__head__back"></span>
+    <h1 class="proto__slide__head__title">editor’s picks</h1>
+  </header> 
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+  
+</div>
+
+    <!-- SLIDE 2: top news -->
+<div class="proto__slide proto__slide__1 proto__slide--in js-protoSlide4Photo">
+  
+  <header class="proto__slide__head js-protoSlideBackBtn">
+    <span class="proto__slide__head__back"></span>
+    <h1 class="proto__slide__head__title">Photo roll</h1>
+  </header> 
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+
+  <article class="proto__item">
+    <header class="proto__item__header">
+      <img class="proto__item__thumb">
+    </header>
+    <h2 class="proto__item__headline">
+      <span class="proto__item__date">Today</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
+    </h2>
+    <h4 class="proto__item__subhead">
+      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
+    </h4>
+  </article>
+  
+</div>
+    
+</main>
+
+
+
+</body>
+</html>

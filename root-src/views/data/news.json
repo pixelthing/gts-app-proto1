@@ -1,0 +1,17 @@
+{
+  "data" : {
+    "adjectives" : [
+      {
+        "group" : "irregular",
+        "en" : "vit",
+        "et" : "vitt",
+        "pl" : "vita",
+        "den" : "vita",
+        "det" : "vita",
+        "de" : "vita",
+        "en" : "white",
+        "color" : true
+      }
+    ]
+  }
+}
