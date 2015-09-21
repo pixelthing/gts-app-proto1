@@ -72,13 +72,10 @@ html,body {
   // SLIDE: INTRO
   &__intro {
     background-color: #333;
-    &__btn {
-      position: absolute;
-      display: block;
-      bottom: 25px;
-      left: 25px;
-      right: 25px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   // SLIDE: 1
@@ -142,6 +139,8 @@ html,body {
   }
 }
 
+/* article list */
+
 .proto__item {
   padding: 0 5px 20px;
   @include respond-to(xs-only) {
@@ -171,8 +170,9 @@ html,body {
     }
   }
   &__header {
+    height: 0;
+    padding-top: 66.66%;
     background-color: #333;
-    padding-top: 60%;
   }
   &__headline {
     margin: 0.3em 5px;
@@ -193,5 +193,53 @@ html,body {
     background-color: #999;
     font-weight: 400;
     font-size: 0.6em;
+  }
+}
+
+/* image list */
+
+.proto__image-group {
+  overflow: hidden;
+  //@include respond-to(sm-min) {
+  //  float: left;
+  //  width: 51.5%;
+  //  margin-left: -5px;
+  //}
+  //&__3 {
+  //  @include respond-to(sm-min) {
+  //    width: 48.9%;
+  //    margin-left: -5px;
+  //  }
+  //}
+  &__item {
+    padding: 0 5px 5px;
+    &__v,
+    &__v2 {
+      width: 47.65%;
+      float: left;
+      padding-right: 2.5px;
+      .proto__item__header {
+        padding-top: 149.5%;
+        @include respond-to(xs-min) {
+          padding-top: 148.2%;
+        }
+      }
+    }
+    &__h,
+    &__h2 {
+      width: 52.35%;
+      float: left;
+      padding-left: 2.5px;
+    }
+    &__v2 {
+      float: right;
+      padding-left: 2.5px;
+      padding-right: 5px;
+    }
+    &__h2 {
+      float: right;
+      padding-left: 5px;
+      padding-right: 2.5px;
+    }
   }
 }
