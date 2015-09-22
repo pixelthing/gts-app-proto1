@@ -9,6 +9,9 @@ var protoNav = function() {
     document.querySelector('.js-protoSlideIntroBtn').addEventListener('click',function() {
       document.querySelector('.js-protoSlideIntro').classList.add('proto__slide--background');
       document.querySelector('.js-protoSlide1').classList.remove('proto__slide--background');
+      document.querySelector('.js-protoMenu').classList.add('proto__menu--in');
+      document.querySelector('.js-protoItems').classList.add('proto__items--in');
+      document.querySelector('.js-protoSlide1Bar').classList.add('proto__slide__bar--in');
     })
   }
   

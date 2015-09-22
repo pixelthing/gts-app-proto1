@@ -3423,6 +3423,9 @@ var protoNav = function() {
     document.querySelector('.js-protoSlideIntroBtn').addEventListener('click',function() {
       document.querySelector('.js-protoSlideIntro').classList.add('proto__slide--background');
       document.querySelector('.js-protoSlide1').classList.remove('proto__slide--background');
+      document.querySelector('.js-protoMenu').classList.add('proto__menu--in');
+      document.querySelector('.js-protoItems').classList.add('proto__items--in');
+      document.querySelector('.js-protoSlide1Bar').classList.add('proto__slide__bar--in');
     })
   }
   
@@ -3470,6 +3473,8 @@ var transitionDetail = function() {
   var viewPortDims = {};
   var transitionInProgress = false;
   var transitionOutProgress = false;
+  var currentList = null;
+  var currentListScrollTop = 0;
   // detail modal stuff
   var detail = null;
   var detailBar = null;
@@ -3634,6 +3639,7 @@ var transitionDetail = function() {
         detailSubhead.classList.add('proto__detail__subhead--in');
         detailBody.classList.add('proto__detail__body--in');
         detailHeader.removeAttribute('style');
+        currentList.classList.add('proto__slide--hide');
       }
       transitionInProgress = false;
     }
@@ -3646,6 +3652,10 @@ var transitionDetail = function() {
 
       transitionOutProgress = true;
 
+      document.querySelectorAll('.proto__slide--hide').forEach(function(el){
+        el.classList.remove('proto__slide--hide');
+      });
+    
       detailBar.classList.remove('proto__detail__bar--in');
       detailBackground.classList.remove('proto__detail__background--in');
       detailHeader.classList.add('proto__detail__header--out');
@@ -3675,19 +3685,31 @@ var transitionDetail = function() {
 
   }
 
+  // in modal mode, stops lists underneath the modal from scrolling
   var lockList = function() {
-
+    currentList = document.querySelector('.js-protoSlide:not(.proto__slide--in)');
+    currentListScrollTop = currentList.scrollTop;
+    currentList.classList.add('proto__slide--locked');
+    currentList.scrollTop = 0;
+    currentList.querySelector('.js-protoSlideBar').style.marginTop = ( 0 - currentListScrollTop ) + 'px';
   }
 
+  // after exiting modal mode
   var unLockList = function() {
-    
+    document.querySelectorAll('.proto__slide--locked').forEach(function(el){
+      el.classList.remove('proto__slide--locked');
+    });
+    document.querySelectorAll('.js-protoSlideBar').forEach(function(el){
+      el.removeAttribute('style');
+    });
+    currentList.scrollTop = currentListScrollTop;
   }
 
   var cleanUp = function() {
 
     document.querySelectorAll('.proto__item__header__img--hide').forEach(function(el){
       el.classList.remove('proto__item__header__img--hide');
-    })
+    });
 
     detail.classList.remove('proto__detail--ready');
     detailBar.classList.remove('proto__detail__bar--in');

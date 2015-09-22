@@ -1,45 +1,49 @@
 <!-- SLIDE 1 -->
-<div class="proto__slide proto__slide__1 proto__slide--background js-protoSlide1">
+<div class="proto__slide proto__slide__1 js-protoSlide js-protoSlide1">
   
-  <header class="proto__slide__bar">
+  <header class="proto__slide__bar js-protoSlideBar js-protoSlide1Bar">
     <h1 class="proto__slide__bar__title">prototype</h1>
   </header> 
   
-  <menu class="proto__slide__1__menu">
-    <a href="#protoTop" class="proto__slide__1__menu__item proto__slide__1__menu__item--news js-protoSlideTopBtn">
-      <div class="proto__slide__1__menu__item__img proto__slide__1__menu__item__img--news"></div>
-      <i class="icon proto__slide__1__menu__item__icon proto__slide__1__menu__item__icon__news"></i>
-      <span class="proto__slide__1__menu__item__text">Top news</span>
+  <menu class="proto__menu js-protoMenu">
+    <a href="#protoTop" class="proto__menu__item proto__menu__item--news js-protoSlideTopBtn">
+      <div class="proto__menu__item__img proto__menu__item__img--news"></div>
+      <i class="icon proto__menu__item__icon proto__menu__item__icon__news"></i>
+      <span class="proto__menu__item__text">Top news</span>
     </a>
-    <a href="#protoPicks" class="proto__slide__1__menu__item js-protoSlideEditorBtn">
-      <div class="proto__slide__1__menu__item__img"></div>
-      <i class="icon proto__slide__1__menu__item__icon"></i>
-      <span class="proto__slide__1__menu__item__text">Editor's Pick</span>
+    <a href="#protoPicks" class="proto__menu__item js-protoSlideEditorBtn">
+      <div class="proto__menu__item__img"></div>
+      <i class="icon proto__menu__item__icon"></i>
+      <span class="proto__menu__item__text">Editor's Pick</span>
     </a>
-    <a href="#protoPhotos" class="proto__slide__1__menu__item js-protoSlidePhotoBtn">
-      <div class="proto__slide__1__menu__item__img"></div>
-      <i class="icon proto__slide__1__menu__item__icon"></i>
-      <span class="proto__slide__1__menu__item__text">Photo Roll</span>
+    <a href="#protoPhotos" class="proto__menu__item js-protoSlidePhotoBtn">
+      <div class="proto__menu__item__img"></div>
+      <i class="icon proto__menu__item__icon"></i>
+      <span class="proto__menu__item__text">Photo Roll</span>
     </a>
   </menu>
 
-  <div class="proto__slide__divider">Latest News</div>
+  <section class="proto__items js-protoItems">
 
-  {{#each news}}
-    {{#lt @index 12}}
-      <article class="proto__item js-protoTransitionIn" data-news-index="{{@index}}">
-        <header class="proto__item__header">
-          <div class="proto__item__header__img{{#if img.anchorTop}} proto__item__header__img--top{{/if}}{{#if img.anchorBottom}} proto__item__header__img--bottom{{/if}} js-protoItemHeaderImg" style="background-image:url(/img/news/{{img.sm}})"></div>
-        </header>
-        <h2 class="proto__headline">
-          <span class="proto__date">{{date}}</span>
-          {{title}}
-        </h2>
-        <h4 class="proto__subhead">
-          {{intro}} 
-        </h4>
-      </article>
-    {{/lt}}
-  {{/each}}
+    <div class="proto__slide__divider">Latest News</div>
+
+    {{#each news}}
+      {{#lt @index 12}}
+        <article class="proto__item js-protoTransitionIn" data-news-index="{{@index}}">
+          <header class="proto__item__header">
+            <div class="proto__item__header__img{{#if img.anchorTop}} proto__item__header__img--top{{/if}}{{#if img.anchorBottom}} proto__item__header__img--bottom{{/if}} js-protoItemHeaderImg" style="background-image:url(/img/news/{{img.sm}})"></div>
+          </header>
+          <h2 class="proto__headline">
+            <span class="proto__date">{{date}}</span>
+            {{title}}
+          </h2>
+          <h4 class="proto__subhead">
+            {{intro}} 
+          </h4>
+        </article>
+      {{/lt}}
+    {{/each}}
+
+  </section>
   
 </div>
