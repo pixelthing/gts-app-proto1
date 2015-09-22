@@ -25,69 +25,21 @@
 
   <div class="proto__slide__divider">Latest News</div>
 
-  <article class="proto__item">
-    <header class="proto__item__header">
-      <img class="proto__item__thumb">
-    </header>
-    <h2 class="proto__item__headline">
-      <span class="proto__item__date">Today</span>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
-    </h2>
-    <h4 class="proto__item__subhead">
-      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
-    </h4>
-  </article>
-
-  <article class="proto__item">
-    <header class="proto__item__header">
-      <img class="proto__item__thumb">
-    </header>
-    <h2 class="proto__item__headline">
-      <span class="proto__item__date">Today</span>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
-    </h2>
-    <h4 class="proto__item__subhead">
-      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
-    </h4>
-  </article>
-
-  <article class="proto__item">
-    <header class="proto__item__header">
-      <img class="proto__item__thumb">
-    </header>
-    <h2 class="proto__item__headline">
-      <span class="proto__item__date">Today</span>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
-    </h2>
-    <h4 class="proto__item__subhead">
-      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
-    </h4>
-  </article>
-
-  <article class="proto__item">
-    <header class="proto__item__header">
-      <img class="proto__item__thumb">
-    </header>
-    <h2 class="proto__item__headline">
-      <span class="proto__item__date">Today</span>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
-    </h2>
-    <h4 class="proto__item__subhead">
-      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
-    </h4>
-  </article>
-
-  <article class="proto__item">
-    <header class="proto__item__header">
-      <img class="proto__item__thumb">
-    </header>
-    <h2 class="proto__item__headline">
-      <span class="proto__item__date">Today</span>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus
-    </h2>
-    <h4 class="proto__item__subhead">
-      Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt. 
-    </h4>
-  </article>
+  {{#each news}}
+    {{#lt @index 12}}
+      <article class="proto__item" data-news-index="{{@index}}">
+        <header class="proto__item__header">
+          <img class="proto__item__thumb">
+        </header>
+        <h2 class="proto__item__headline">
+          <span class="proto__item__date">{{date}}</span>
+          {{title}}
+        </h2>
+        <h4 class="proto__item__subhead">
+          {{intro}} 
+        </h4>
+      </article>
+    {{/lt}}
+  {{/each}}
   
 </div>

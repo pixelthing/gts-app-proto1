@@ -1,17 +1,40 @@
 {
-  "data" : {
-    "adjectives" : [
-      {
-        "group" : "irregular",
-        "en" : "vit",
-        "et" : "vitt",
-        "pl" : "vita",
-        "den" : "vita",
-        "det" : "vita",
-        "de" : "vita",
-        "en" : "white",
-        "color" : true
-      }
-    ]
-  }
+  "news" : [
+    {
+      "date" : "today",
+      "title" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus",
+      "intro" : "Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt.",
+      "img" : "vita"
+    },
+    {
+      "date" : "today",
+      "title" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus",
+      "intro" : "Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt.",
+      "img" : "vita"
+    },
+    {
+      "date" : "today",
+      "title" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus",
+      "intro" : "Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt.",
+      "img" : "vita"
+    },
+    {
+      "date" : "today",
+      "title" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus",
+      "intro" : "Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt.",
+      "img" : "vita"
+    },
+    {
+      "date" : "today",
+      "title" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus",
+      "intro" : "Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt.",
+      "img" : "vita"
+    },
+    {
+      "date" : "today",
+      "title" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit vivamus",
+      "intro" : "Aenean ut vestibulum lectus, vitae pharetra neque. Nam vitae tempor urna. Nullam porttitor turpis et dui posuere tincidunt.",
+      "img" : "vita"
+    }
+  ]
 }
