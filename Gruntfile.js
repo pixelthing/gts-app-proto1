@@ -6,7 +6,6 @@ module.exports = function(grunt) {
     config: {
       src:  'root-src',
       dev:  'root-dev',
-      prod: 'root-prod',
       fileCss: 'main',
       fileJs: 'main',
       fileFrameCss: 'frame',
@@ -79,7 +78,7 @@ module.exports = function(grunt) {
     },
     sass: {
       options: {
-        //sourceMap: true,
+        sourceMap: false,
       },
       dev: {
         files: {
@@ -141,30 +140,6 @@ module.exports = function(grunt) {
         options: {
           base: '<%= config.dev %>'
         }
-      },
-      prod : {
-        options: {
-          base: '<%= config.prod %>'
-        }
-      }
-    },
-    uglify: {
-      my_target: {
-        files: {
-          '<%= config.prod %>/js/main.js': ['<%= config.dev %>/js/main.js']
-        }
-      }
-    },
-    compress: {
-      main: {
-        options: {
-          mode: 'gzip'
-        },
-        files: [
-          // Each of the files in the src/ folder will be output to
-          // the dist/ folder each with the extension .gz.js
-          {expand: true, src: ['src/*.js'], dest: '<%= config.prod %>/', ext: '.gz.js'}
-        ]
       }
     },
     watch: {
@@ -214,11 +189,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask('devbuild', ['clean', 'copy', 'assemble', 'sass', 'concat:devIndex', 'concat:devFrame', 'postcss']);
 
-  grunt.registerTask('prodbuild', ['clean', 'copy', 'assemble', 'sass', 'concat:devIndex', 'concat:devFrame', 'postcss', 'uglify', 'compress']);
-
   // Default task(s).
   grunt.registerTask('default', ['devbuild', 'connect:dev', 'watch']);
 
-  grunt.registerTask('deploy', ['prodbuild', 'connect:prod', 'gh-pages']);
+  grunt.registerTask('deploy', ['devbuild', 'gh-pages']);
 
 };
