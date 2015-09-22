@@ -34,7 +34,6 @@ var protoNav = function() {
     // slide X Top News > slide 1
     document.querySelectorAll('.js-protoSlideBackBtn').forEach(function(el) {
       el.addEventListener('click',function(ev) {
-        console.log('x');
         ev.preventDefault();
         document.querySelector('.js-protoSlide1').classList.remove('proto__slide--out');
         document.querySelector('.js-protoSlide2Top').classList.add('proto__slide--in');

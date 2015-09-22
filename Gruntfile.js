@@ -43,7 +43,7 @@ module.exports = function(grunt) {
       assets: {
         expand: true,
         cwd: '<%= config.src %>/',
-        src: ['fonts/*', 'img/*'],
+        src: ['fonts/*', 'img/*', 'img/*/*'],
         dest: '<%= config.dev %>/'
       },
       manifest: {

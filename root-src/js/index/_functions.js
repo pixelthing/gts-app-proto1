@@ -1,6 +1,17 @@
 /* UTILITIES */
 
-// nodelist
+// on ready
+// http://youmightnotneedjquery.com/
+function ready(fn) {
+  if (document.readyState != 'loading'){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
+// nodelist as array
+// https://developer.mozilla.org/en/docs/Web/API/NodeList
 var arrayMethods = Object.getOwnPropertyNames( Array.prototype );
 
 arrayMethods.forEach( attachArrayMethodsToNodeList );
@@ -12,6 +23,7 @@ function attachArrayMethodsToNodeList(methodName) {
 };
 
 // ajax request, wrapped in a JS promise
+// http://www.html5rocks.com/en/tutorials/es6/promises/
 function ajax(url) {
     return new Promise(function (resolve, reject) {
         var req = new XMLHttpRequest();
@@ -79,7 +91,18 @@ function ajax(url) {
 
 }(window.document, window.EventTarget || window.Element));
 
-var isSafari = /constructor/i.test(window.HTMLElement);
-if (isSafari) {
-    document.querySelector('html').classList.add('safari');
+// attach multiple event handlers to an item (helps with prefixing)
+function addMultipleListeners(element,events,handler,useCapture,args){
+  if (!(events instanceof Array)){
+    throw 'addMultipleListeners: '+
+          'please supply an array of eventstrings '+
+          '(like ["click","mouseover"])';
+  }
+  //create a wrapper for to be able to use additional arguments
+  var handlerFn = function(e){
+    handler.apply(this, args && args instanceof Array ? args : []);
+  }
+  for (var i=0;i<events.length;i+=1){
+    element.addEventListener(events[i],handlerFn,useCapture);
+  }
 }

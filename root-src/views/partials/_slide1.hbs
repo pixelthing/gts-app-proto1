@@ -1,8 +1,8 @@
 <!-- SLIDE 1 -->
-<div class="proto__slide proto__slide__3 proto__slide--background js-protoSlide1">
+<div class="proto__slide proto__slide__1 proto__slide--background js-protoSlide1">
   
-  <header class="proto__slide__head">
-    <h1 class="proto__slide__head__title">prototype</h1>
+  <header class="proto__slide__bar">
+    <h1 class="proto__slide__bar__title">prototype</h1>
   </header> 
   
   <menu class="proto__slide__1__menu">
@@ -27,15 +27,15 @@
 
   {{#each news}}
     {{#lt @index 12}}
-      <article class="proto__item" data-news-index="{{@index}}">
+      <article class="proto__item js-protoTransitionIn" data-news-index="{{@index}}">
         <header class="proto__item__header">
-          <img class="proto__item__thumb">
+          <div class="proto__item__header__img{{#if img.anchorTop}} proto__item__header__img--top{{/if}}{{#if img.anchorBottom}} proto__item__header__img--bottom{{/if}} js-protoItemHeaderImg" style="background-image:url(/img/news/{{img.sm}})"></div>
         </header>
-        <h2 class="proto__item__headline">
-          <span class="proto__item__date">{{date}}</span>
+        <h2 class="proto__headline">
+          <span class="proto__date">{{date}}</span>
           {{title}}
         </h2>
-        <h4 class="proto__item__subhead">
+        <h4 class="proto__subhead">
           {{intro}} 
         </h4>
       </article>

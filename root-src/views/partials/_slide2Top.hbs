@@ -1,9 +1,9 @@
 <!-- SLIDE 2: top news -->
-<div class="proto__slide proto__slide__1 proto__slide--in js-protoSlide2Top">
+<div class="proto__slide proto__slide__2 proto__slide--in js-protoSlide2Top">
   
-  <header class="proto__slide__head js-protoSlideBackBtn">
-    <span class="proto__slide__head__back"></span>
-    <h1 class="proto__slide__head__title">top news</h1>
+  <header class="proto__slide__bar js-protoSlideBackBtn">
+    <span class="proto__slide__bar__back"></span>
+    <h1 class="proto__slide__bar__title">top news</h1>
   </header> 
 
   {{#each news}}
@@ -12,11 +12,11 @@
         <header class="proto__item__header">
           <img class="proto__item__thumb">
         </header>
-        <h2 class="proto__item__headline">
-          <span class="proto__item__date">{{date}}</span>
+        <h2 class="proto__headline">
+          <span class="proto__date">{{date}}</span>
           {{title}}
         </h2>
-        <h4 class="proto__item__subhead">
+        <h4 class="proto__subhead">
           {{intro}} 
         </h4>
       </article>
