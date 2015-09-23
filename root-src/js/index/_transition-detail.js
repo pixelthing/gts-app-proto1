@@ -182,10 +182,6 @@ var transitionDetail = function() {
       ev.preventDefault();
 
       transitionOutProgress = true;
-
-      document.querySelectorAll('.proto__slide--hide').forEach(function(el){
-        el.classList.remove('proto__slide--hide');
-      });
     
       detailBar.classList.remove('proto__detail__bar--in');
       detailBackground.classList.remove('proto__detail__background--in');
@@ -197,6 +193,11 @@ var transitionDetail = function() {
       detailBody.classList.remove('proto__detail__body--in');
       detailHeader.style.webkitTransform = detailImgTransform;
       detailHeader.style.transform       = detailImgTransform;
+
+      document.querySelectorAll('.proto__slide--hide').forEach(function(el){
+        el.classList.remove('proto__slide--hide');
+      });
+
     });
 
     // end transition
