@@ -384,6 +384,7 @@ html,body {
     margin-left: 10px;
     margin-right: 10px;
     opacity: 0;
+    transform: scale3d(1,1,1);
     transition: all 0ms;
     &--in {
       opacity: 1;
