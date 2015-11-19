@@ -7,18 +7,24 @@
   
   <menu class="proto__menu js-protoMenu">
     <a href="#protoTop" class="proto__menu__item proto__menu__item--news js-protoSlideTopBtn">
-      <div class="proto__menu__item__img proto__menu__item__img--news"></div>
-      <i class="icon proto__menu__item__icon proto__menu__item__icon__news"></i>
+      <div class="proto__menu__item__img proto__menu__item__img--news">
+        <figure class="proto__menu__item__img__inner" style="background-image:url(img/news/sm/6859055833_282e16f7ea_z.jpg)"></figure>
+      </div>
+      <i class="fa fa-bullhorn icon proto__menu__item__icon proto__menu__item__icon__news"></i>
       <span class="proto__menu__item__text">Top news</span>
     </a>
     <a href="#protoPicks" class="proto__menu__item js-protoSlideEditorBtn">
-      <div class="proto__menu__item__img"></div>
-      <i class="icon proto__menu__item__icon"></i>
+      <div class="proto__menu__item__img">
+        <figure class="proto__menu__item__img__inner" style="background-image:url(img/news/sm/6427643607_e62590530d_b.jpg)"></figure>
+      </div>
+      <i class="fa fa-thumb-tack icon proto__menu__item__icon"></i>
       <span class="proto__menu__item__text">Editor's Pick</span>
     </a>
     <a href="#protoPhotos" class="proto__menu__item js-protoSlidePhotoBtn">
-      <div class="proto__menu__item__img"></div>
-      <i class="icon proto__menu__item__icon"></i>
+      <div class="proto__menu__item__img">
+        <figure class="proto__menu__item__img__inner" style="background-image:url(img/news/sm/7757908032_a2b1ef4d79_k.jpg)"></figure>
+      </div>
+      <i class="fa fa-camera icon proto__menu__item__icon"></i>
       <span class="proto__menu__item__text">Photo Roll</span>
     </a>
   </menu>
@@ -31,7 +37,7 @@
       {{#lt @index 12}}
         <article class="proto__item js-protoTransitionIn" data-news-index="{{@index}}">
           <header class="proto__item__header">
-            <div class="proto__item__header__img{{#if img.anchorTop}} proto__item__header__img--top{{/if}}{{#if img.anchorBottom}} proto__item__header__img--bottom{{/if}} js-protoItemHeaderImg" style="background-image:url(img/news/{{img.sm}})"></div>
+            <div class="proto__item__header__img{{#if img.anchorTop}} proto__item__header__img--top{{/if}}{{#if img.anchorBottom}} proto__item__header__img--bottom{{/if}} js-protoItemHeaderImg" style="background-image:url(img/news/sm/{{img.file}})" data-img-lg="img/news/lg/{{img.file}}"></div>
           </header>
           <h2 class="proto__headline">
             <span class="proto__date">{{date}}</span>

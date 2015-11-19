@@ -10,6 +10,8 @@ body {
   margin: 0;
   font-family: avenir;
   font-size: 16px;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
 }
 a {
   text-decoration: none;
@@ -26,4 +28,8 @@ a {
     left:0;
     top: inherit;
   }
+}
+
+::-webkit-scrollbar { 
+    display: none; 
 }

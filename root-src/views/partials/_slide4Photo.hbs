@@ -6,69 +6,25 @@
     <h1 class="proto__slide__bar__title">Photo roll</h1>
   </header> 
 
-  <div class="proto__image-group proto__image-group__3">
+    {{#each photoroll}}
+      {{#lt @index 8}}
 
-    <article class="proto__image-group__item proto__image-group__item__v">
-      <header class="proto__item__header">
-        <img class="proto__item__thumb">
-      </header>
-    </article>
+        <div class="proto__image-group proto__image-group__{{group}}">
 
-    <article class="proto__image-group__item proto__image-group__item__h">
-      <header class="proto__item__header">
-        <img class="proto__item__thumb">
-      </header>
-    </article>
+          {{#each articles}}
 
-    <article class="proto__image-group__item proto__image-group__item__h">
-      <header class="proto__item__header">
-        <img class="proto__item__thumb">
-      </header>
-    </article>
+          <article class="proto__image-group__item proto__image-group__item__{{img.orientation}}">
+            <header class="proto__item__header">
+              <div class="proto__item__header__img{{#if img.anchorTop}} proto__item__header__img--top{{/if}}{{#if img.anchorBottom}} proto__item__header__img--bottom{{/if}} js-protoItemHeaderImg" style="background-image:url(img/news/sm/{{img.file}})" data-img-lg="img/news/lg/{{img.file}}"></div>
+            </header>
+          </article>
 
-  </div>
+          {{/each}}
 
-  <div class="proto__image-group">
+        </div>
 
-    <article class="proto__image-group__item">
-      <header class="proto__item__header">
-        <img class="proto__item__thumb">
-      </header>
-    </article>
-
-  </div>
-
-  <div class="proto__image-group proto__image-group__3">
-
-    <article class="proto__image-group__item proto__image-group__item__v2">
-      <header class="proto__item__header">
-        <img class="proto__item__thumb">
-      </header>
-    </article>
-
-    <article class="proto__image-group__item proto__image-group__item__h2">
-      <header class="proto__item__header">
-        <img class="proto__item__thumb">
-      </header>
-    </article>
-
-    <article class="proto__image-group__item proto__image-group__item__h2">
-      <header class="proto__item__header">
-        <img class="proto__item__thumb">
-      </header>
-    </article>
-
-  </div>
-
-  <div class="proto__image-group">
-
-    <article class="proto__image-group__item">
-      <header class="proto__item__header">
-        <img class="proto__item__thumb">
-      </header>
-    </article>
-
-  </div>
+      {{/lt}}
+    {{/each}}
 
   
 </div>

@@ -55,6 +55,7 @@ html,body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-transform: uppercase;
     transform:  scale3d(0.01,0.01,1) ;
     .proto__menu--in & {
       animation: bounceIn ease-out 400ms;
@@ -86,7 +87,15 @@ html,body {
       bottom: 5px;
       left: 2.5px;
       z-index: -1;
-      background-color: #666;
+      background-color: #000;
+      &__inner {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background-size: cover;
+        opacity: 0.5;
+        transition: opacity 500ms;
+      }
       &--news {
         left: 5px;
         right: 2.5px;
@@ -97,9 +106,9 @@ html,body {
       width: 1em;
       height: 1em;
       margin-bottom: 5px;
-      background-color: rgba(255,255,255,0.5);
-      background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, #fff 5px, transparent 7px, transparent 10px);
-      border: 1px solid #fff;
+      //background-color: rgba(255,255,255,0.5);
+      //background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, #fff 5px, transparent 7px, transparent 10px);
+      //border: 1px solid #fff;
       font-size: 30px;
       &__news {
         font-size: 60px;
